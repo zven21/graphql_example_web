@@ -36,11 +36,14 @@ export default function Home({ posts }) {
       </Head>
 
       {posts.map((item) => (
-        <div key={item.id}>
-          <Link href={`/posts/${item.id}`}>
-            <h3>{item.title}</h3>
-          </Link>
-          <p>{item.desc}</p>
+        <div className="space-y-2" key={item.id}>
+
+          <div className="bg-gray-100 rounded-lg shadow-lg p-4 m-4">
+            <Link href={`/posts/${item.id}`}>
+              <h3 className="text-2xl font-semibold text-red-400">{item.title}</h3>
+            </Link>
+            <p>{item.desc}</p>
+          </div>
         </div>
       ))}
     </div>

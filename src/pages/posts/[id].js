@@ -10,7 +10,10 @@ export default function PostDetail({ post }) {
         <title>Post Detail</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>{post.title}</h1>
+      <div className="space-y-2 flex flex-col m-4 p-4">
+        <h1 className="text-red-400 font-semibold text-2xl">{post.title}</h1>
+        <div className="text-gray-600">{post.desc}</div>
+      </div>
     </div>
   )
 }
